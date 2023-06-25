@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-
+import React, { useState, useEffect } from "react";
+import MainContainer from "./components/MainContainer/MainContainer";
 import "./App.css";
 
 function App() {
@@ -12,7 +12,6 @@ function App() {
   useEffect(() => {
     const fetchProducts = async () => {
       const getProducts = await fetch("https://fakestoreapi.com/products");
-
       const jsonProducts = await getProducts.json();
       setProducts(jsonProducts);
     };
@@ -20,22 +19,9 @@ function App() {
   }, []);
 
   return (
-    <>
-      <div>
-        <h2>Hello</h2>
-        <form onSubmit={null}>
-          <input
-            type="text"
-            name="formInput"
-            onChange={(e) =>
-              setFormData({ ...formData, [e.target.name]: e.target.value })
-            }
-            value={formData?.formInput}
-          />
-          <input type="submit" value="Submit" />
-        </form>{" "}
-      </div>
-    </>
+    <div>
+      <MainContainer products={products} />
+    </div>
   );
 }
 
