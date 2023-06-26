@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import MainContainer from "./components/MainContainer/MainContainer";
+import Navbar from "./components/Navbar/Navbar";
+import Cart from "./components/Cart/Cart";
 import "./App.css";
 
 function App() {
@@ -8,6 +10,8 @@ function App() {
   });
 
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
+  const [showCart, setShowCart] = useState(false);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -18,9 +22,26 @@ function App() {
     fetchProducts();
   }, []);
 
+  const addToCart = (product) => {
+    setCart((prevCart) => [...prevCart, product]);
+  };
+
+  const toggleCart = () => {
+    setShowCart(!showCart);
+  };
+
   return (
     <div>
-      <MainContainer products={products} />
+      <Navbar />
+      <button className="view-cart-btn" onClick={toggleCart}>
+        {showCart ? "Return" : "View Cart"}
+      </button>
+
+      {showCart ? (
+        <Cart cart={cart} />
+      ) : (
+        <MainContainer products={products} addToCart={addToCart} />
+      )}
     </div>
   );
 }

@@ -5,19 +5,6 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -39,4 +26,76 @@
 
 .read-the-docs {
   color: #888;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.product-card {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Allow the height to adjust proportionally to the width */
+}
+
+.product-card img {
+  width: 100%; /* Ensure the image fills the container */
+  height: auto; /* Allow the height to adjust proportionally to the width */
+}
+
+.product-card.expanded {
+  text-align: center;
+}
+
+.main-container {
+  color: black;
+}
+
+.category-container {
+  width: 100%; /* Adjust the width as needed */
+  margin-bottom: 20px; /* Adjust the margin as needed */
+  display: flex;
+  flex-wrap: wrap;
+  color: black;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+
+.navbar {
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-container div {
+  color: black;
+  cursor: pointer;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.navbar-container div:last-child {
+  margin-right: 0;
+}
+
+.cart-container {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: black;
+}
+
+.cart-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.cart-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
 }
