@@ -33,7 +33,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <button className="view-cart-btn" onClick={toggleCart}>
+      <button className="view-cart-btn" role="button" onClick={toggleCart}>
         {showCart ? "Return" : "View Cart"}
       </button>
 

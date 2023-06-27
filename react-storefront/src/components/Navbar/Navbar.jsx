@@ -11,14 +11,30 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div onClick={() => scrollToCategory("men-clothing")}>
+        <div
+          className="navbar-item"
+          onClick={() => scrollToCategory("men-clothing")}
+        >
           Mens Clothing
         </div>
-        <div onClick={() => scrollToCategory("women-clothing")}>
+        <div
+          className="navbar-item"
+          onClick={() => scrollToCategory("women-clothing")}
+        >
           Womens Clothing
         </div>
-        <div onClick={() => scrollToCategory("jewelry")}>Jewelry</div>
-        <div onClick={() => scrollToCategory("electronics")}>Electronics</div>
+        <div
+          className="navbar-item"
+          onClick={() => scrollToCategory("jewelry")}
+        >
+          Jewelry
+        </div>
+        <div
+          className="navbar-item"
+          onClick={() => scrollToCategory("electronics")}
+        >
+          Electronics
+        </div>
       </div>
     </nav>
   );

@@ -3,9 +3,9 @@ import ProductCard from "../ProductCard/ProductCard";
 
 function MenClothingContainer({ products, addToCart }) {
   return (
-    <div>
-      <h3>Mens Clothing</h3>
-      <div className="category-container">
+    <div className="category-container">
+      <h1>Mens Clothing</h1>
+      <div className="products-container">
         {products.map((product) => (
           <ProductCard
             key={product.id}
