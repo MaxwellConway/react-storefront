@@ -3,7 +3,7 @@ import ProductCard from "../ProductCard/ProductCard";
 
 function ElectronicsContainer({ products, addToCart }) {
   return (
-    <div>
+    <div className="category-container">
       <h1>Electronics</h1>
       <div className="products-container">
         {products.map((product) => (

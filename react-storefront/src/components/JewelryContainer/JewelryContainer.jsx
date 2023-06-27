@@ -3,8 +3,8 @@ import ProductCard from "../ProductCard/ProductCard";
 
 function JewelryContainer({ products, addToCart }) {
   return (
-    <div>
-      <h1>Jewlery</h1>
+    <div className="category-container">
+      <h1>Jewelry</h1>
       <div className="products-container">
         {products.map((product) => (
           <ProductCard

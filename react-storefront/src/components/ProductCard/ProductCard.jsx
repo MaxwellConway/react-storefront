@@ -13,9 +13,11 @@ function ProductCard({ product, addToCart, showAddToCartButton }) {
 
   return (
     <div className={`product-card ${expanded ? "expanded" : ""}`}>
-      <img src={product.image} alt={product.title} onClick={toggleExpanded} />
-      <h4>{product.title}</h4>
-      <p>Price: {product.price}</p>
+      <div className="clickable" onClick={toggleExpanded}>
+        <img src={product.image} alt={product.title} />
+        <h4>{product.title}</h4>
+        <p>Price: {product.price}</p>
+      </div>
       {expanded && (
         <>
           <p>Description: {product.description}</p>
